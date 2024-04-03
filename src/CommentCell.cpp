@@ -12,7 +12,7 @@ std::set<std::string> Verified;
 
 void download_list() {
 	if (!downloaded) {
-		auto res = web::fetch("https://raw.githubusercontent.com/LXanii/GD-YouTubers/main/names.txt");
+		auto res = web::fetch("https://raw.githubusercontent.com/tigervol14/Verified-Users-GD-Levels/main/names.txt");
 		if (!res) {
 			log::info("Failed to fetch file from GitHub.");
 		}
