@@ -5,19 +5,19 @@
 		"android": "2.205",
 		"mac": "2.200"
 	},
-	"version": "v1.0.4",
-	"id": "xanii.youtubers",
-	"name": "YouTubers",
-	"developer": "Xanii",
+	"version": "v1.0.0",
+	"id": "tv14.verifiedthumbnailers",
+	"name": "Verified Thumbnailers",
+	"developer": "Tigervol14Games, LXanii",
     "dependencies": [
         {
             "id": "geode.node-ids",
-            "version": ">=v1.4.0",
+            "version": ">=v1.0.0",
             "importance": "required"
         }
     ],
-	"repository": "https://github.com/LXanii/GD-YouTubers/tree/main",
-	"description": "Gives YouTubers a badge in Geometry Dash to help identify their profiles!",
+	"repository": "https://github.com/tigervol14/Verified-Users-GD-Levels/tree/main",
+	"description": "Gives verified thumbnailers for level thumbnails a custom badge, Credit to LXanii For the original source code!",
 	"resources": {
         "sprites": [
             "resources/*.png"
