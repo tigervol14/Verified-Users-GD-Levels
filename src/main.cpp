@@ -6,7 +6,7 @@
 
 using namespace geode::prelude;
 
-class $modify(YouTuberAlert, ProfilePage) {
+class $modify(VerifiedAlert, ProfilePage) {
 
 CCSprite * badge;
 CCMenuItemSpriteExtra* icon;
@@ -22,7 +22,7 @@ bool is_mod;
 
 		std::string player_name = m_usernameLabel->getString();
 
-		for (const auto& names : YouTubers) {
+		for (const auto& names : Verified) {
 			std::string lower_names(names.begin(), names.end());
 			std::string lower_player_name(player_name.begin(), player_name.end());
 			for (char &c : lower_names) {
@@ -33,15 +33,15 @@ bool is_mod;
 			}
 			lower_player_name.erase(remove_if(lower_player_name.begin(), lower_player_name.end(), isspace), lower_player_name.end());
 			if (lower_names == lower_player_name) {
-				log::info("YouTuber Found! {}", names);
+				log::info("Verified Thumbnailer Found! {}", names);
 				CCNode* first_letter = reinterpret_cast<CCNode*>(m_usernameLabel->getChildren()->objectAtIndex(0));
 
 				CCMenu* icon_menu = CCMenu::create();
 				icon_menu->setPosition({0,0});
 
-				m_fields->badge = CCSprite::create("youtuber.png"_spr);
+				m_fields->badge = CCSprite::create("verified.png"_spr);
 				
-				m_fields->icon = CCMenuItemSpriteExtra::create(m_fields->badge, this, menu_selector(YouTuberAlert::found_youtube));
+				m_fields->icon = CCMenuItemSpriteExtra::create(m_fields->badge, this, menu_selector(VerifiedAlert::found_youtube));
 				m_fields->icon->setScale(m_usernameLabel->getScale() + 0.05f);
 				m_fields->icon->setPosition(first_letter->convertToWorldSpace(getPosition()));
 
@@ -66,7 +66,7 @@ bool is_mod;
 	}
 
 	void found_youtube(CCObject*) {
-		FLAlertLayer::create("Youtuber Found!","This user is a <cr>prominent member</c> of the <cy>Geometry Dash</c> Community!","OK")->show();
+		FLAlertLayer::create("Verified User Found!","This user is a <cr>prominent member</c> of the <cy>Geometry Dash</c> Community!","OK")->show();
 		if (is_mod) m_fields->icon->setScale(m_usernameLabel->getScale() + 0.05f);
 		else m_fields->icon->setScale(m_usernameLabel->getScale() + 0.1f);
 	}
