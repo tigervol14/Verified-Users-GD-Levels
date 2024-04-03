@@ -8,7 +8,7 @@
 using namespace geode::prelude;
 
 bool downloaded = false;
-std::set<std::string> YouTubers;
+std::set<std::string> Verified;
 
 void download_list() {
 	if (!downloaded) {
@@ -21,7 +21,7 @@ void download_list() {
 	
 			std::istringstream iss(data);
 			std::string temp_string;
-			log::info("Downloaded YouTuber List");
+			log::info("Downloaded Verified User List");
 
 			while (iss >> temp_string) {
 				YouTubers.insert(temp_string);
@@ -51,7 +51,7 @@ CCSprite* badge_mod;
 
 		download_list();
 
-		for (const auto& names : YouTubers) {
+		for (const auto& names : Verified) {
 			std::string lower_names(names.begin(), names.end());
 			std::string lower_player_name(username.begin(), username.end());
 			for (char &c : lower_names) {
@@ -67,7 +67,7 @@ CCSprite* badge_mod;
 				if (player_comment_small || player_comment_big_area) {
 
 					CCNode* last_letter;
-					m_fields->badge = CCSprite::create("youtuber.png"_spr);
+					m_fields->badge = CCSprite::create("verified.png"_spr);
 
 					m_fields->badge->setScale(0.54);
 
