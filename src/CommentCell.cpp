@@ -24,7 +24,7 @@ void download_list() {
 			log::info("Downloaded Verified User List");
 
 			while (iss >> temp_string) {
-				YouTubers.insert(temp_string);
+				Verified.insert(temp_string);
 			}
 			downloaded = true;
 		}
