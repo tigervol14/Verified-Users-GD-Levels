@@ -5,6 +5,6 @@
 
 using namespace geode::prelude;
 
-extern std::set<std::string> YouTubers;
+extern std::set<std::string> Verified;
 
 void download_list();
