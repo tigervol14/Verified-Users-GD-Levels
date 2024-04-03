@@ -1,3 +1,5 @@
-# YouTuber Badge Mod
+# Verified Thumbnailer Badge
 
-A simple mod that gives YouTubers / Popular figures a badge in Geometry Dash to help identify their profiles!
+Gives verified thumbnailers for level thumbnails a custom badge
+
+Credit to LXanii For the original source code!
