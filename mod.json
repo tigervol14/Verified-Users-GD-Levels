@@ -8,7 +8,7 @@
 	"version": "v1.0.0",
 	"id": "tv14.verifiedthumbnailers",
 	"name": "Verified Thumbnailers",
-	"developer": "Tigervol14Games, LXanii",
+	"developer": "Tigervol14Games, LXanii, NAJD",
     "dependencies": [
         {
             "id": "geode.node-ids",
