@@ -67,8 +67,11 @@ bool is_mod;
 
 	void found_youtube(CCObject*) {
 		FLAlertLayer::create("Verified User Found!","This user is a <cg>Verified Thumbnailer</c> in the <cl>Level Thumbnails</c> Discord Server!","OK")->show();
-		if (is_mod) m_fields->icon->setScale(m_usernameLabel->getScale() + 0.05f);
-		else m_fields->icon->setScale(m_usernameLabel->getScale() + 0.1f);
+		if (is_mod) {
+            m_fields->icon->setScale(m_usernameLabel->getScale() + 0.05f);
+        } else {
+            m_fields->icon->setScale(m_usernameLabel->getScale() + 0.1f);
+        }
 	}
 
 };
