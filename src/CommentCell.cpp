@@ -33,9 +33,9 @@ void download_list() {
 
 class $modify(CommentCell) {
 
-float badge_x_pos = 0.f;
-CCSprite* badge;
-CCSprite* badge_mod;
+	float badge_x_pos = 0.f;
+	CCSprite* badge;
+	CCSprite* badge_mod;
 
 	void loadFromComment(GJComment* comment) {
 
